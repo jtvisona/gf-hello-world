@@ -1,0 +1,7 @@
+Food2: Is (This Fish) Delicious
+Food2Eng: this fish is delicious
+Food2Ita: questo pesce Š delizioso
+Food2: Is (That (QKind Italian (QKind Italian Cheese))) Warm
+Food2Eng: that Italian Italian cheese is warm
+Food2Ita: quel formaggio italiano italiano Š caldo
+

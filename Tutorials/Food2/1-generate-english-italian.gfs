@@ -1,0 +1,2 @@
+i ./Food2/Food2Eng.gf ./Food2/Food2Ita.gf
+gr -number=2 | l -treebank

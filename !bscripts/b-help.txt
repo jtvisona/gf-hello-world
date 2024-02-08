@@ -1,0 +1,91 @@
+================================================================
+HELP OPTIONS
+================================================================
+These are the commands to see the native output of the help utilities.
+
+bash executable: type '$ bash -help | less'
+bash: type '$ help | less'
+gf executable: type '$ gf -help | less'
+gf shell: type '> help'
+b: type '$ b help'
+
+================================================================
+B COMMANDS
+================================================================
+These help options are specific to b.
+
+hello       a simple hello world; useful for testing purposes
+ver         provides version information
+help        this output
+makesvg     convert a DOT to an SVG
+new         creates a new grammar in the working directory
+open        opens a tutorial grammar
+grammar     displays or specifies a grammar directory relative to the repo working directory
+show        displays list of files in the grammar directory
+opensvg     open an SVG in the brower
+parseopen   parses GF command, pipes to vt, outputs DOT, converts to SVG, and opens SVG
+clean       removes all of the files in working directories that are DOT, SVG, TXT, and HTML; also TXT files in examples
+killgfos    kills all of the GFOs in the example directories
+syseval     captures basic information from the shell
+run         execute the default script ./run.gfs; useful for development in the interpreter
+gfs         executes a GF script
+js          executes a JavaScript script
+lessons     simply displays a tutorial
+
+================================================================
+GF SHELL COMMANDS
+('> help')
+================================================================
+Entering the shell or executing scripts requires GF commands. Note that the command line and the shell
+do feature different feature sets. The shell does contain a number of features not available from the
+execution environment.
+
+aw, align_words             show word alignments between languages graphically
+ca, clitic_analyse          print the analyses of all words into stems and clitics
+cc, compute_concrete        computes concrete syntax term using a source grammar
+dc, define_command          define a command macro
+dg, dependency_graph        print module dependency graph
+dt, define_tree             define a tree or string macro
+e, empty                    empty the environment (except the command history)
+eb, example_based           converts .gfe files to .gf files by parsing examples to trees
+eh, execute_history         read commands from a file and execute them
+gr, generate_random         generate random trees in the current abstract syntax
+gt, generate_trees          generates a list of trees, by default exhaustive
+h, help                     get description of a command, or a the full list of commands
+i, import                   import a grammar from source code or compiled .pgf file
+l, linearize                convert an abstract syntax expression to string
+lc, linearize_chunks        linearize a tree that has metavariables in maximal chunks without them
+ma, morpho_analyse          print the morphological analyses of all words in the string
+mq, morpho_quiz             start a morphology quiz
+p, parse                    parse a string to abstract syntax expression
+pg, print_grammar           print the actual grammar with the given printer
+ph, print_history           print command history
+ps, put_string              return a string, possibly processed with a function
+pt, put_tree                return a tree, possibly processed with a function
+q, quit                     exit GF interpreter
+r, reload                   repeat the latest import command
+rf, read_file               read string or tree input from a file
+rt, rank_trees              show trees in an order of decreasing probability
+sd, show_dependencies       show all constants that the given constants depend on
+se, set_encoding            set the encoding used in current terminal
+so, show_operations         show all operations in scope, possibly restricted to a value type
+sp, system_pipe             send argument to a system command
+ss, show_source             show the source code of modules in scope, possibly just headers
+tq, translation_quiz        start a translation quiz
+tt, to_trie                 combine a list of trees into a trie
+ut, unicode_table           show a transliteration table for a unicode character set
+vd, visualize_dependency    show word dependency tree graphically
+vp, visualize_parse         show parse tree graphically
+vt, visualize_tree          show a set of trees graphically
+wf, write_file              send string or tree to a file
+
+================================================================
+SHORT LISTS
+================================================================
+Frequently used.
+
+bash executable:    --help, --init-file, --verbose, --version
+bash:               bg, cd, echo, exit, help, fg, jobs, kill, pwd, {&, >, >>, <, |, UP, DOWN, CTRL+C}
+b:                  hello, ver, help, open, new, mksvg, opensvg, parseopen, clean, killgfos, syseval, gfs, js, lessons
+gf shell:           aw, ca, cc, dc, dg, dt, e, eb, eh, gr, gt, h, i, l, lc, ma, mq, p, pg, ph, ps, pt, q, r, rf, rt, sd, se, so, sp, ss, tq, tt, ut, vd, vp, vt, wf
+gf executable:      --cpu, --interactive, --lexer, --make, --run, --verbose, --version

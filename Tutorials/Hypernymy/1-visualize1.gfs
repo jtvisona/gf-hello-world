@@ -1,0 +1,5 @@
+-- Build and display sample Hypernymy tree
+i ./Tutorials/Hypernymy/Hypernymy2Eng.gf
+p "color red" | vt | wf -file="colors.dot"
+! bash b makesvg colors colors
+! bash b opensvg colors

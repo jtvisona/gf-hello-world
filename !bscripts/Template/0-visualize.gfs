@@ -1,0 +1,4 @@
+ps "-visualize.gfs executing...\n"
+i ./%%%EXAMPLE-DIR%%%/%%%EXAMPLE-CONCRETE.gf
+! bash b mksvg %%%OUTPUT-NAME%%%.dot %%%OUTPUT-NAME%%%.svg
+! bash b opensvg %%%OUTPUT-NAME%%%.svg

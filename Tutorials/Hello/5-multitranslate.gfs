@@ -1,0 +1,3 @@
+i ./Tutorials/Hello/HelloEng.gf
+i ./Tutorials/Hello/HelloIta.gf
+parse -lang=HelloEng "hello mum" | linearize

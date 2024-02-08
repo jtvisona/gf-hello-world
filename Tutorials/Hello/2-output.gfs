@@ -1,0 +1,20 @@
+-- ================================================================
+--    
+-- This script does the same essential task in GF as 'helloscript1-intro.gfs', but strips out all of the put_strings but one. Also, when running
+-- this script will write the the standard output to a file instead:s
+--
+--      $ gf --run < ./Tutorials/Hello/helloscript2-output.gfs > output.txt
+--
+-- Note that this script also uses the abbreviations for commands where:
+--
+--      * 'ps' for 'put_string'
+--      * 'i' for 'import'
+--      * 'p' for 'parse'
+--      * 'l' for 'linearize'
+
+-- NB put_string allows you to send text like an echo or print statement in other languages
+ps "helloscript.gfs executing...\n"
+i ./Tutorials/Hello/HelloEng.gf
+p "hello world"     
+l Hello World
+

@@ -1,0 +1,7 @@
+i ./Tutorials/Food/FoodEng.gf
+-- '-tr' trace flag shows intermediary steps of piping | l
+gr -number=3 -tr | l
+
+
+
+

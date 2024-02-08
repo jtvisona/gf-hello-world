@@ -1,0 +1,8 @@
+-- Build and display sample Hypernymy tree
+i ./Tutorials/Hypernymy/Hypernymy2Eng.gf
+p "color red" | vt | wf -file="cred.dot"
+p "flavor red" | vt | wf -file="fred.dot"
+! bash b makesvg cred cred
+! bash b makesvg fred fred
+! bash b opensvg cred
+! bash b opensvg fred

@@ -1,0 +1,4 @@
+ps "helloscript.gfs executing...\n"
+i ./Tutorials/Hello/HelloEng.gf
+! bash b mksvg colors.dot colors.svg
+! bash b opensvg colors.svg

@@ -1,0 +1,5 @@
+ps "1-parse.gfs executing...\n"
+i ./Hello/HelloEng.gf
+p "%%%PARSE-STRING%%%"
+
+

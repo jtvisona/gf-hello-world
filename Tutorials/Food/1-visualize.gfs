@@ -1,0 +1,6 @@
+i ./Tutorials/Food/FoodEng.gf
+ps "that very warm wine is Italian"
+p "that very warm wine is Italian" | vt | wf -file="very-warm-wine.dot"
+! bash b makesvg very-warm-wine very-warm-wine
+! bash b opensvg very-warm-wine
+

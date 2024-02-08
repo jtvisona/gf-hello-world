@@ -1,0 +1,13 @@
+graph {
+
+    n0[label = "Color : Hypernym", style = "solid", shape = "plaintext"] ;
+    n0_0[label = "cRed : colorHyponym", style = "solid", shape = "plaintext"] ;
+    n0 -- n0_0 [style = "solid"];
+
+    a[
+        label=< <FONT POINT-SIZE="10">HypernymyEng.gf</FONT> >,
+        shape = "rectangle"
+    ];
+
+}
+

@@ -1,0 +1,13 @@
+Term0 False
+
+Term0 True
+
+Term0 Zero
+
+Term1 (IsZero TermExpr1)
+
+Term1 (Pred TermExpr1)
+
+Term1 (Succ TermExpr1)
+
+Term3 (IfThenElse TermExpr1 TermExpr2 TermExpr3)

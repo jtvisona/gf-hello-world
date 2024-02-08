@@ -1,0 +1,27 @@
+TTDL
+================================================================
+* get the system to open list of defined_commands
+
+GF Notes
+================================================================
+Can execute bash commands with
+    ! bash create-svg.sh
+This doesn't work
+    ! bash rm create-svg.sh, but reverse it with bash ./bashscripts/remove.sh etc.
+    If you want to gather text from the system, use bash directly ! pwd > pwd.text
+
+conceptual
+================================================================
+* What is the difference between gr and gt ultimately?
+
+
+Don't forget about the shell config
+? tr -s '\n'
+tr --help
+
+notes
+================================================================
+NB '> ! clear' clears the screen in the interpeter
+
+
+

@@ -1,0 +1,68 @@
+Introductory Lesson 1
+================================================================
+
+(Note: These tutorials use the less executable to regulate output. Using the up and down arrow keys, or the space bar allows
+one to navigate the content. Pressing q at the prompt allows one to exit. EG: ':q' ends the current lesson. For a tutorial on less, sequence
+https://ioflood.com/blog/less-linux-command/.)
+
+The purpose of this repo is to provide a tutorial environment for learning the Grammatical Framework (GF). By using this
+command line interface, it should be possible to quickly use prewritten GF syntax to compile parsers and test grammars
+written in GF, which is a language devoted to integrating natural language features into grammars.
+
+In order to make the environment simpler to use at first, this repo consists of two learning aides: the b shellscript, and
+a series of scripts that the b shellscript can execute. This tutorial uses bash commands and such commands will be prefixed
+with a '$'. This tutorial also uses the GF shell, and such commands will be prefixed with '>'. For example, '$ pwd' means
+type 'pwd' after the bash prompt. '> help' means to type 'help' after typing '$ gf' to enter the GF shell and then typing 'help'.
+
+This environment uses bash as its base, but extends functionality through scripts and executables. Thus, there are range of
+contexts that one can execute commands. Understanding which context one is executing a command in this repo is the key to success.
+
+First, there are bash commands:
+
+$ <bash_command>
+(EG: '$ pwd')
+
+But the tutorial provides a bash script called b which executes various other bash scripts intended to function as a toolbox
+for the tutorials. Thus, to execute b scripts as opposed to bash scripts:
+
+$ b <b_command>
+(EG: '$ b hello')
+
+There are also GF scripts that are written as tutorials and are executed by typing:
+
+$ b gfs <gf_script>
+(EG: '$ b gfs run')
+
+and JavaScript using node.js can be invoked using:
+
+$ b js <js_script>
+(EG: '$ b js hello')
+
+Importantly, one can enter the GF shell and execute commands interactively:
+
+$ gf
+> <gf_command>
+(EG: '> help', '> quit')
+
+This is not the same as executing a command using flags to use the gf executable from the bash shell. GS scripts
+are run at the bash command line by piping in a script into the run-enabled executable for instance:
+
+$ gf <flags>
+(EG: '$ gf --run < gfscript.gfs')
+
+Importantly, the GS shell  allows one to shell-out to bash using the bang as an escape sequence:
+
+> ! pwd
+
+Lastly, note one can shell-out of gf into a separate bash environment other than the one the gf shell is running in:
+
+> ! bash b <b_command>
+(EG: '! bash b gfs run')
+
+So, keeping straight whether one is entering a bash command (prefaced with '$'), a b command (prefaced with '$ b'),
+a gf shell command (prefaced with '>'), or a gf shell-out command (prefaced with '> !') determines what context one
+is operating with. It can be confusing at first, but once the various contexts are mastered, this repo allows the use
+of bash, gf, node, or any other environment to move data from and to quickly and easily by using bash as a sort of
+text glue as it was intended to be.
+
+For the next introductory lesson type '$ b lesson intro2'.f

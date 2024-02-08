@@ -1,0 +1,31 @@
+-- helloscript1-intro.gfs
+-- ================================================================
+--    
+-- This is a basic script which uses the Hello/HelloEng abstract/concrete grammar by using import and then linearizing a string
+-- submitted to the engine. To execute from the bash commandline:
+--
+--      $ gf --run < ./Tutorials/Hello/1-intro.gfs
+--
+-- This script takes the abstract syntax in 'Hello.gf' and pairs it with the abstract syntax in 'HelloEng.gf' to parse and linearize.
+--
+--      * Scripts do not run like bash scripts, but rather require 'gf.exe --run < <SCRIPTNAME>.gfs'
+--      * All tutorials will use bash configured to see both GF and graphviz tools
+--      * You cannot use multi-line comments by way of '{--}' notation
+--      * Running gf with the '--run' flag turns off the prompt when executing
+--      * Empty lines in the script are rendered as empty lines in the output
+--      * Problems with parsing will return the error message 'command not parsed:'
+--      * Call the concrete 'HelloEng.gf' since it links to the abstract syntax in 'Hello.gf'
+
+-- NB put_string allows you to send text like an echo or print statement in other languages
+put_string "Importing HelloEng.gf\n "
+import ./Tutorials/Hello/HelloEng.gf
+
+put_string "Parsing 'hello world':"
+-- NB quotation-delimitted string
+parse "hello world"     
+
+put_string "Linearizing Hello World:"
+-- NB no quotation-delimitted string
+linearize Hello World
+
+put_string "Execution complete!"

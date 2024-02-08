@@ -1,0 +1,8 @@
+!notes/
+Testing/
+*.gfo
+*.hi
+*.o
+*.pgf
+*.tmp
+*~

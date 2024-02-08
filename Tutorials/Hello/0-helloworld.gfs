@@ -1,0 +1,2 @@
+put_string "Hello, world!!!"
+put_string "Hello, file!!!" | write_file -file="hello-file.txt"

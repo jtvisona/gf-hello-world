@@ -1,0 +1,4 @@
+i ./Tutorials/Food/FoodEng.gf
+gt | ? wc
+pg -words
+pg -words | ? wc

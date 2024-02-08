@@ -1,0 +1,23 @@
+================================================================
+* Create while loop for interactive mode to create b scripts
+* make all important applications env vars for reference
+* Get script to check for file extensions when running scripts
+* Create init file for b instead of b-verbose
+* 'b help' - categorize gf commands into groups
+* 'b url' - create script to 
+* Modify b to read intialization values for env vars from an init file; could use script to retrieve each variable
+Note that the .bash_profile might call on the same utility as above
+* go through b and validate all arguments with null-checks, existence-checks, etc.
+
+
+gf output
+================================================================
+* Create HTML document for output including text and SVGs all at onceb opensvg test
+* adapt html interface
+
+gf tutorials
+================================================================
+* Have 'b lesson' w/o lesson give list of lessons available from file
+* Add 2.4 BNF Grammar for Italian starting on pg. 36
+
+* Could set this up by npm or git-hub clone

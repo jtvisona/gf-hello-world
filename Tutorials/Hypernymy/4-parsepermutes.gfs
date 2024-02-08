@@ -1,0 +1,13 @@
+-- Build and display sample Hypernymy tree
+i ./Tutorials/Hypernymy/Hypernymy2Eng.gf
+ps "Showing all parse permutes..."
+ps
+p "color blue"
+p "color green"
+p "color red"
+p "flavor blue"
+p "flavor green"
+p "flavor red"
+
+
+

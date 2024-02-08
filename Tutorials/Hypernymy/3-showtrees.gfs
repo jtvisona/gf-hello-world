@@ -1,0 +1,4 @@
+-- Build and display sample Hypernymy tree
+i ./Tutorials/Hypernymy/Hypernymy2Eng.gf
+gt
+
