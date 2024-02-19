@@ -1,34 +1,42 @@
 concrete CalculatorP of Calculator = open Prelude in {
 
 lincat 
-  Exp = SS ;
-  Prog= SS ; 
+  Program = SS ;
+  Expr = SS ;
   Var = {
-    s : Str;
-    t : Str;
+    s : Str ;
+    t : Str ;
   } ;
-  Dec = SS ;
-  Typ = Str;
+  DataType = Str ;
+  PreProcType = Str ;
 
 lin
-  float = "float";
-  int   = "int";
-  EPlus  _ = infix "+" ;
+  -- Primitive data types
+  int   = "int" ;          -- single token literal terminal
+  float = "float" ;        -- single token literal terminal
+  -- Primitive preprocessor directives
+  fast = "fast" ;
+  optimize = "optimize" ;
+
+  EInt i = i ;            -- 1-arity literal terminal
+    -- "int 214"
+  EFloat i = i ;          -- 1-arity literal terminal
+    -- "float 3.14"
+  EVar _ v = v;
+
+  EPlus  _ = infix "+" ;  -- see oper below
   EMinus _ = infix "-" ;
   ETimes _ = infix "*" ;
   EDiv   _ = infix "/" ;
-  EInt i = i ;
-  EFloat i = i ;
-  EVar _ v = v;
+  
 
-  --Blah x = x;
-  --SVar s = s;
-
-  PEmpty = { s = "" };
-  PInit Ttyp exp D = { s = Ttyp ++ D.$0 ++ "=" ++ exp.s ++ ";" ++ D.s };
-  --PAss var exp prog = { s = var.s ++ "=" ++ exp.s ++ ";" ++ prog.s };
-
+  -- Three types of programs
+  PEmpty = { s = "" } ;                 -- see abstract defn PEmpty
+  PPreProcessorMode = { s = "#pre" ++ fast } ;  -- see abstract defn PPreProcessor
+  Stmnt Ttyp exp D = { s = Ttyp ++ D.$0 ++ "=" ++ exp.s ++ ";" ++ D.s } ;
+    -- PInit float (EFloat 3.14), "float _ = 3.14 ;"
 oper
-  infix : Str -> SS -> SS -> SS = \f,x,y -> 
-    ss ("(" ++ x.s ++ f ++ y.s ++ ")") ;
+  infix : Str -> SS -> SS -> SS = \op,arg1,arg2 -> 
+    ss ("(" ++ arg1.s ++ op ++ arg2.s ++ ")") ;
+
 }

@@ -1,25 +1,40 @@
 abstract Calculator = {
+
 flags startcat = Prog ;
+
 cat 
-  Exp Typ;
-  Prog;
-  Var Typ;
-  Dec;
-  Typ;
+  Program;         -- Program is the highest level of structure
+  DataType;      -- DataType is the lowest level of structure
+  Expr DataType;  -- Expression is subtype of DataType defined with ss
+  Var DataType;  -- Variable is subtype of DataType defined with table
+   
 
 fun
+  PEmpty : Program ;               -- see PEmpty concrete defn
+  PPreProcessorMode : Program ;    -- see PPreProcessor concrete defn
+  float, int : DataType ;           -- see float, int concrete defns
+  fast, optimize : PreProcType
 
-  float, int : Typ;
+  EInt : Int -> Exp int;        -- 
+  EFloat : Float -> Exp float;  -- 
+  
+  EPlus, EMinus, ETimes, EDiv : (T : DataType) -> Exp T -> (Exp T) -> Exp T ;
 
-  EPlus, EMinus, ETimes, EDiv : (T:Typ) -> (Exp T) -> (Exp T) -> Exp T ;
-  EInt : Int -> Exp int;
-  EFloat : Float -> Exp float;
-
-  PEmpty: Prog; 
-  PInit : (T:Typ) -> (Exp T) -> ((Var T) -> Prog) -> Prog; 
-  --Blah : Thing -> Prog;
-  --PInitComma :Exp -> (Var -> Var -> Prog) -> Prog; 
-  EVar : (T:Typ) -> (Var T) -> Exp T;
-  --PAss :Var -> Exp -> Prog -> Prog;
-
+  Stmnt : (T : DataType) -> (Expr T) -> ((Var T) -> Program) -> Program ;
+  EVar : (T : DataType) -> (Var T) -> Exp T;
+  
+  {-
+    (parse string/AST)
+    ""
+      PEmpty
+    "#pre"
+      PProcessorMode
+    "float _ = 3.14 ;"
+      PInit float (EFloat 3.14) (\_1 -> PEmpty)
+    "int _ = 135 ;"
+      int _ = (Ent 135) (\_1 -> PEmpty)
+    "float _ = 3.14 ; int _ = 135 ;"
+      PInit float (EFloat 3.14) (\_1 -> PInit int (EInt 135) (\_1 -> PEmpty))          
+  
+  -}
 }
