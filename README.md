@@ -1,6 +1,7 @@
 ![GF Logo](http://www.grammaticalframework.org/doc/Logos/gf1.svg)
 
-# Welcome to the Unofficial Grammatical Framework Introductory Tutorial
+# Welcome to the GF Hello World
+## The Unofficial Grammatical Framework Introductory Tutorial
 
 This repo is the home of an unofficial tutorial site for learning how to use the [Grammatical Framework (Wikipedia)](https://en.wikipedia.org/wiki/Grammatical_Framework_(programming_language)), a Haskell-based project
 that allows for the construction of formal grammars. Think of GF as a programming language to capture the syntax and semantics of natural languages (NL) for machine execution. The tutorials contained by this site will
